@@ -5,7 +5,7 @@ if (isset($_POST['signup'])) {
     $password = $_POST['password'];
     $error = '';
 
-    if (!empty($screenName) or !empty($email) or !empty($password)) {
+    if (empty($screenName) or empty($email) or empty($password)) {
         $error = 'All fields are required';
     } else {
         $email = $getFromU->checkInput($email);
