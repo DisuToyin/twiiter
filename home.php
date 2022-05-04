@@ -51,7 +51,7 @@ $user = $getFromU->userData($user_id);
                                         <ul>
                                             <li><a href="<?php echo $user->username ?>"><?php echo $user->username ?></a></li>
                                             <li><a href="settings/account">Settings</a></li>
-                                            <li><a href="includes/logout.php">Log out</a></li>
+                                            <li><a href="index.php">Log out</a></li>
                                         </ul>
                                     </div>
                                 </div>
