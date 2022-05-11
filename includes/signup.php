@@ -19,9 +19,11 @@ if (isset($_POST['signup'])) {
         } else if (strlen($password) < 5) {
             $error = 'Password is too short';
         } else {
-            if ($getFromU->checkEmail($email) == false) {
+            if ($getFromU->checkEmail($email) === false) {
                 $error = 'This email is already in use';
             } else {
+                $getFromU->register($email, $password, $screenName);
+                header('Location: home.php');
             }
         }
     }
